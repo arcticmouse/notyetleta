@@ -1,0 +1,61 @@
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+	or die ('Could not connect to the database server' . mysqli_connect_error());
+
+$query = "SELECT SUBSTRING(url, 23) FROM big_scan";
+$bigScan = mysqli_query($con, $query);
+
+$query = "SELECT url FROM sharepointlist";
+$spList = mysqli_query($con, $query);
+
+$con->close();
+
+//variables
+$duplArr[] = null; //array to hold duplicates bt two tables
+$bigSArr[] = null; //array to hold value from big_scan that is not in sharepoint_list
+//$sharArr[] = null; //array to hold value from sharepoint_list that is not in big_scan 
+
+//counters
+$d = 0;
+$b = 0;
+//$s = 0; 
+
+while ($bigScanTwo = $mysqli_fetch_array($bigScan)) {
+	//take out junk from bigScan urls
+	$stuff = $bigScanTwo['url'];
+	if ((substr($stuff, 1) = "u") || (substr($stuff, 1) = ".") {
+		$stuff = substr($stuff, 1);
+		} //end if
+	
+	//fill duplArr and bigSArr
+	while ($spListTwo = $mysqli_fetch_array($spList)) {
+		if ($stuff = $spListTwo['url']) {
+			$duplArr[$d] = $stuff;
+			$d++;
+			} //end if
+			else { 
+				$bigSArr[$b] = $stuff;
+				$b++;
+				} //end else
+		} //end while
+	} //end while
+
+//print our duplArr and bigSArr
+?>
+<table><tbody>
+<tr><td>In both tables</td><td>In big_scan only</td></tr>
+<?php
+for ($i=0; $i<=(max($d, $b)); $i++) {
+	?><tr><td>
+	<?php
+	if (!empty($duplArr[$i]){
+		echo $duplArr[$i];
+		} //end if
+		else echo " ";
+	?></td><?php
+	if (!empty($bigSArr[$i]){
+		echo $bigSArr[$i];
+		} //end if
+		else echo " ";
+	?></td></tr><?php
+	} //end for
+?></tbody></table>
