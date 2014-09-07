@@ -1,0 +1,130 @@
+
+@import "generic/base.css";
+body {
+    background: url("/images/background_stripe.jpg") repeat-x scroll 0 0 #FFFFFF;
+    color: #444444;
+    font-family: georgia,"Times New Roman",Times,serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+#mast {
+    display: none;
+}
+#wrapper {
+    margin-top: 30px;
+    max-width: 1260px;
+    min-width: 960px;
+    width: 60%;
+}
+#footer {
+    background: none repeat scroll 0 0 transparent;
+    border-top: 5px solid #000000;
+    color: #000000;
+    height: 125px;
+    padding: 15px 0;
+}
+#page_wrap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    width: 950px;
+}
+#content {
+    bottom: 155px;
+    float: left;
+    height: 100%;
+    margin-top: 275px;
+    padding: 10px;
+    width: 460px;
+}
+#page {
+    background-image: url("/images/welcome_2.jpg");
+    border-left: 1px solid #000000;
+    padding: 0;
+    width: 625px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 625px 275px;
+    background-color: transparent;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+}
+h1 {
+    border-bottom: 1px solid #000000;
+    color: #444444;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    text-align: right;
+}
+.byEditor .rightSupplements {
+    float: right;
+    margin-right: -155px;
+    margin-top: -75px;
+    width: 170px;
+}
+a:link, a:active, a:visited {
+    color: #005725;
+    text-decoration: none;
+}
+.byEditor .rightSupplements .supp li, .rightSupplements .supp li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #EBEBEB;
+    border-color: #000000 #000000 #007934;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2) inset;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: center;
+}
+a:hover {
+    text-decoration: underline;
+}
+.rightSupplements h2 {
+    display: none;
+}
+#column_nav a:link, #column_nav a:visited {
+    color: #005725;
+    padding: 2px 5px 2px 15px;
+}
+#column_nav a:hover {
+    background: none repeat scroll 0 0 #DEDEDE;
+    color: #005725;
+    text-decoration: none;
+}
+#column_nav {
+    width: 285px;
+}
+#column_nav h2 {
+    color: #444444;
+    font-family: inherit;
+    font-size: 1.5em;
+    line-height: inherit;
+    padding-left: 5px;
+}
+.top-level {
+    display: none;
+}
+.rightSupplements .supp ul {
+    list-style: none outside none;
+}
+#footer a:link, #footer a:visited {
+    color: #007934;
+    text-decoration: none;
+}
+.rightSupplements {
+    float: right;
+    margin-right: -155px;
+    margin-top: -108px;
+    width: 134px;
+}
+.row_divider {
+    clear: none !important;
+    overflow: visible !important;
+}
+.ad-supp p {
+    display: none;
+}
