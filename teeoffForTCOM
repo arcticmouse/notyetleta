@@ -1,0 +1,64 @@
+
+@import "http://web.unthsc.edu/site/styles/standard.css";
+body {
+    background-color: #AAD88B;
+    background-image: none;
+    color: #31535F;
+    font-family: Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
+}
+.mast-links, .pseudoH1, #search, #menu {
+    display: none;
+}
+#wrapper {
+    border-left: 1px solid #31535F;
+    border-right: 1px solid #31535F;
+}
+#mast {
+    background: url("https://www.regonline.com/custImages/350000/350612_copy/tee%20off%20long-H.JPG") repeat-x scroll center center / 100% 100% rgba(0, 0, 0, 0);
+    height: 250px;
+}
+#column_nav {
+    background: none repeat scroll 0 0 #E5E9ED;
+    border-bottom: 1px solid #000000;
+    color: #31535F;
+    float: left;
+    height: 2em;
+    position: absolute;
+    width: 100%;
+}
+#column_nav a:link, #column_nav a:visited {
+    color: #046FAC;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#column_nav ul {
+    display: inline;
+}
+#column_nav li {
+    float: left;
+    padding: 0 1em;
+}
+#column_nav li a:link {
+    padding: 0.5em 0.5em 0.65em;
+}
+a.current, #column_nav a:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #000000;
+    border-radius: 3px 3px 0 0;
+    border-right: 1px solid #000000;
+    border-top: 1px solid #000000;
+    color: #31535F !important;
+    text-decoration: none !important;
+}
+#page_wrap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #31535F;
+}
+#page {
+    padding: 2em;
+    width: 95%;
+}
+#footer {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #31535F;
+}
