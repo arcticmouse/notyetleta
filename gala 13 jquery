@@ -1,0 +1,135 @@
+ $(function() {
+    $( "#dialog-form-sponsor" ).dialog({
+      autoOpen: false,
+      height: 686,
+      width: 654,
+      resizable: false,
+      modal: true,
+	  dialogClass: 'style_sponsor',
+    });
+
+ 
+    $( "#sponsor" )
+      .click(function() {
+        $( "#dialog-form-sponsor" ).dialog( "open" );
+		});
+
+    $( "#closureSponsor" )
+	  .click(function() {
+		$( "#dialog-form-sponsor" ).dialog( "close" );
+		});
+		
+		   $( "#dialog-form-ticket" ).dialog({
+      autoOpen: false,
+      height: 686,
+      width: 654,
+      resizable: false,
+      modal: true,
+    });
+ 
+    $( "#ticket" )
+      .button()
+      .click(function() {
+	    $( "#dialog-form-ticket" ).dialog({dialogClass: 'style_ticket'});
+        $( "#dialog-form-ticket" ).dialog( "open" );
+      });
+    $( "#closureTicket" )
+	  .click(function() {
+		$( "#dialog-form-ticket" ).dialog( "close" );
+		});
+
+  });
+  
+  
+  
+  $("#biggerCont a[href^='http://']").attr("target","_blank");
+$('#container').append('<a id="bottomHome" href="http://www.unthsc.edu/" target="_blank">unthsc home</a>');
+
+  $(function() {
+    $( "#dialog-form-ticket" ).dialog({
+      autoOpen: false,
+      height: 686,
+      width: 654,
+      resizable: false,
+      modal: true,
+    });
+ 
+    $( "#ticket" )
+      .button()
+      .click(function() {
+	    $( "#dialog-form-ticket" ).dialog({dialogClass: 'style_ticket'});
+        $( "#dialog-form-ticket" ).dialog( "open" );
+      });
+    $( "#closureTicket" )
+	  .click(function() {
+		$( "#dialog-form-ticket" ).dialog( "close" );
+		});
+
+  });
+
+
+  $(function() {
+    $( "#dialog-form-sponsor" ).dialog({
+      autoOpen: false,
+      height: 686,
+      width: 654,
+      resizable: false,
+      modal: true,
+    });
+
+ 
+    $( "#sponsor" )
+      .click(function() {
+        $( "#dialog-form-sponsor" ).dialog( "open" );
+		});
+
+    $( "#closureSponsor" )
+	  .click(function() {
+		$( "#dialog-form-sponsor" ).dialog( "close" );
+		});
+
+  });
+
+var submitted=false;
+var submitTicket = function() {
+	$(function() {
+			$( "#dialog-form-ticket" ).dialog( "close" );
+			});
+
+	 $( "#thankYou" ).dialog();
+     $( "#thankYou" ).addClass("ticketThankYou");     
+	 $(function() {
+         $( "#thankYou" ).dialog({
+          modal: true
+		  });
+		});
+	 
+	$( "#closureThankYou" )
+	  .click(function() {
+		$( "#thankYou" ).dialog( "close" );
+		});
+	 
+};
+
+
+
+var submitSponsor = function() {
+	 
+	$(function() {
+			$( "#dialog-form-sponsor" ).dialog( "close" );
+			});
+			
+	 $( "#thankYou" ).dialog();
+     $( "#thankYou" ).addClass("sponsorThankYou");
+	 $(function() {
+         $( "#thankYou" ).dialog({
+          modal: true
+		  });
+		});
+	 
+	$( "#closureThankYou" )
+	  .click(function() {
+		$( "#thankYou" ).dialog( "close" );
+		});
+
+};
