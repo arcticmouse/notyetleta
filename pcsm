@@ -1,0 +1,157 @@
+
+@import "http://web.unthsc.edu/site/styles/standard.css";
+body {
+    background: url("/images/tail.jpg") repeat-x scroll 0 0 #E9E9CE;
+    color: #000000;
+    font: 1em Arial,helvetica,sans-serif;
+}
+#mast .pseudoH1 a {
+    background: url("http://www.hsc.unt.edu/images/UNTHSC_sm.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+}
+.mast-links, #menu li, .nav-supp h2, #content h2, #content h1 {
+    display: none;
+}
+#mast {
+    background: url("/images/top_border.jpg") no-repeat scroll 0 0 #FFFFFF;
+    clear: both;
+    margin-top: 1em;
+    padding: 1em 1em 0;
+}
+#menu ul {
+    background: url("http://web.unthsc.edu/images/PCSMheader.png") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+    height: 14em;
+    margin-left: 1em;
+    margin-top: -8em;
+    position: absolute;
+    width: 60em;
+}
+#wrapper {
+    margin: auto;
+    width: 61.5em;
+}
+#SearchSite {
+    border: 1px solid #CCCCCC !important;
+}
+ul.top-level {
+    background: none repeat scroll 0 0 #1A1A1A;
+    float: left;
+    margin-top: -0.5em;
+    text-align: center;
+    width: 60em;
+}
+ul.top-level ul {
+    display: inline;
+}
+ul.top-level li {
+    background: url("/images/ver.jpg") no-repeat scroll 0 7px rgba(0, 0, 0, 0);
+    float: left;
+    padding: 0.4em 1em;
+}
+#column_nav a:link, #column_nav a:visited {
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+ul li.current-parent {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.pseudoH1 {
+    background: url("/images/header_bg.jpg") repeat-y scroll left top rgba(0, 0, 0, 0);
+    height: 11.7em;
+    margin-left: -1.7%;
+    padding-left: 4%;
+    width: 110%;
+}
+#page_wrap {
+    background: url("/images/content_bg2.jpg") repeat-y scroll 0 0 #FFFFFF;
+}
+#menu {
+    background: url("/images/content_bg2.jpg") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+    height: 6em;
+    margin-left: -1.7%;
+    width: 110%;
+}
+#page {
+    margin-top: 3em;
+    width: 82%;
+}
+#footer {
+    background: url("/images/bottom_border.jpg") no-repeat scroll 0 0 #E9E9CE;
+    color: #00843E;
+}
+.nav-supp {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+.nav-supp li:last-child {
+    border-bottom: medium none;
+}
+.listed_item {
+    border: 1px solid #008080;
+    border-radius: 5px;
+    float: right;
+    font-size: 0.8em;
+    padding: 0.5em;
+    width: 19%;
+}
+.byEditor h2, .byEditor h1 {
+    display: block;
+}
+.listed_item .noList {
+    margin: 0 0 0 2em;
+}
+.listed_item, .listed_item h3, .listed_item a:link, .listed_item a:visited {
+    color: #008080;
+}
+.listed_item li {
+    padding-bottom: 0.2em;
+}
+.byEditor {
+    float: left;
+    width: 78%;
+}
+.nav-supp li:nth-child(2) {
+    background: none repeat scroll 0 0 #008080;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.nav-supp li:nth-child(6), .nav-supp li:nth-child(3), .nav-supp li:nth-child(4), .nav-supp li:nth-child(5) {
+    background: none repeat scroll 0 0 #006767;
+    border-bottom: 1px solid #FFFFFF;
+}
+.nav-supp li:nth-child(3) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.nav-supp li:nth-child(6) {
+    border-bottom: medium none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 5px;
+}
+.nav-supp li:nth-child(7) {
+    background: none repeat scroll 0 0 #004D4D;
+    border-bottom: 1px solid #FFFFFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.nav-supp li:nth-child(8) {
+    background: none repeat scroll 0 0 #004D4D;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 5px;
+}
+.nav-supp li:nth-child(9) {
+    background: none repeat scroll 0 0 #003434;
+    border-radius: 5px;
+}
+.top-level .current {
+    color: #00A7A7 !important;
+}
+.nav-supp li:first-child {
+    background: none repeat scroll 0 0 #DBC635;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
