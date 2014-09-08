@@ -1,0 +1,439 @@
+
+@import "https://webqa.unthsc.edu/site/styles/standard.css";
+.home {
+    background: url("/images/background.jpg") no-repeat scroll 50% 0 #000000;
+    position: relative;
+}
+.middleAdvertCarousel2Widget h2, .middleAdvertCarousel2Widget p, #home-menu {
+    display: none !important;
+}
+#mast .pseudoH1 a {
+    background: url("/images/UNTHSC_Header_logo.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+#mast {
+    background: url("/images/header.jpg") no-repeat scroll center center / 105% 100% rgba(0, 0, 0, 0);
+    min-height: 105px;
+    padding: 0.5em 1em 0;
+}
+#mast a:link, #mast a:visited {
+    color: #FFFFFF;
+}
+.mast-links li {
+    border-right: 1px solid #FFFFFF;
+}
+#mast label {
+    color: #FFFFFF;
+}
+#mast input {
+    color: #CACACA;
+}
+.width25 {
+    width: 25% !important;
+}
+#page_wrap {
+    height: 95%;
+    margin-bottom: 5%;
+    margin-top: -3em;
+    width: 100%;
+}
+.new_widget {
+    overflow: visible !important;
+}
+.row_divider:nth-of-type(1) {
+    height: 25em;
+    margin-top: -0.5em;
+    position: absolute;
+    width: 75.05em !important;
+    z-index: 4;
+}
+.row_divider {
+    width: inherit;
+}
+.navigationWidget ul {
+    height: 2.5em;
+    list-style: none outside none;
+    margin: -0.5em 0;
+    overflow: visible;
+}
+.navigationWidget + .navigationWidget {
+    background: url("/images/button_education.jpg") no-repeat scroll 0 0 / 100% 195% rgba(0, 0, 0, 0);
+}
+.row_divider:nth-child(4) {
+    height: 100%;
+}
+.frontPageNews {
+    font-family: tahoma,arial;
+    font-weight: normal;
+    height: 30em;
+    width: 100%;
+}
+.frontPageNews .newsFeedWidget {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #656565;
+    float: left;
+    font-size: 11px;
+    font-weight: lighter;
+    height: 100%;
+    width: 71%;
+}
+.frontPageNews .newsFeedWidget ul {
+    height: 90%;
+    margin: 2% 1% 0;
+}
+.frontPageNews .newsFeedWidget li {
+    font-weight: normal;
+    height: 9em;
+    margin-bottom: 1em;
+    padding: 0;
+}
+.frontPageNews .newsFeedWidget a:link, .frontPageNews .newsFeedWidget a:visited {
+    color: #1E1E1E;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+.frontPageNews .newsFeedWidget .seeAll a:link, .frontPageNews .newsFeedWidget .seeAll a:visited {
+    bottom: 0;
+    color: #155878;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+}
+.frontPageNews .newsEditable {
+    background: url("/images/SideBar_Back.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    float: right;
+    height: 100%;
+    width: 29%;
+}
+.frontPageNews .newsEditable a:link, .frontPageNews .newsEditable a:visited {
+    color: #00B958;
+    float: left;
+    font-weight: bold;
+    padding-left: 1em;
+    text-decoration: none;
+}
+.frontPageNews #newsEditableContent {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1.3em;
+    height: 78%;
+    padding: 1em;
+}
+#footer, .home #footer {
+    background: none repeat scroll 0 0 #000000;
+    height: 7em;
+    padding: 2em 1em;
+}
+#footer span {
+    float: left;
+    height: 100%;
+    width: 33.3%;
+}
+#footerLeft {
+    text-align: left;
+}
+#footerRight {
+    text-align: right;
+    vertical-align: top;
+}
+.new_widget .cateInfoWidget {
+    color: #FFFFFF;
+    display: none;
+    padding: 0 1%;
+    width: 18%;
+}
+.new_widget .cateInfoWidget h3 {
+    color: #FFFFFF;
+}
+.new_widget:hover .cateInfoWidget {
+    display: block;
+    float: left;
+    height: 250px;
+    overflow: visible !important;
+}
+.new_widget:hover {
+    overflow: visible !important;
+}
+.new_widget .stacking ~ .stacking {
+    clear: none;
+    width: 400%;
+}
+.new_widget .navigationWidget {
+    height: 2.3em;
+}
+.new_widget:nth-child(1):hover .navigationWidget, .new_widget:nth-child(2):hover .navigationWidget, .new_widget:nth-child(3):hover .navigationWidget, .new_widget:nth-child(4):hover .navigationWidget {
+    background-position: 0 -2.2em;
+}
+.new_widget:nth-child(1):hover .cateInfoWidget {
+    background: url("/images/dropdown_education_1_.gif") no-repeat scroll center center / 562% 100% rgba(0, 0, 0, 0);
+}
+.new_widget:nth-child(1) .navigationWidget {
+    background: url("/images/button_education.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);
+}
+.new_widget:nth-child(2):hover .cateInfoWidget {
+    background: url("/images/dropdown_patientcare.gif") no-repeat scroll center center / 562% 100% rgba(0, 0, 0, 0);
+}
+.new_widget:nth-child(2) .navigationWidget {
+    background: url("/images/button_patientcare.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);
+}
+.new_widget:nth-child(3):hover .cateInfoWidget {
+    background: url("/images/dropdown_research.gif") no-repeat scroll center center / 562% 100% rgba(0, 0, 0, 0);
+}
+.new_widget:nth-child(3) .navigationWidget {
+    background: url("/images/button_research.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);
+}
+.new_widget:nth-child(4):hover .cateInfoWidget {
+    background: url("/images/dropdown_aboutus.gif") no-repeat scroll center center / 562% 100% rgba(0, 0, 0, 0);
+}
+.new_widget:nth-child(4) .navigationWidget {
+    background: url("/images/button_aboutus.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);
+}
+.seeAll a:link, .seeAll a:visited {
+    padding-right: 1em;
+}
+.navigationWidget a:link, .navigationWidget a:visited {
+    background: url("/images/_button_arrow_normal.png") no-repeat scroll right bottom rgba(0, 0, 0, 0);
+    color: #656565;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 0 9px;
+    text-decoration: none;
+}
+.navigationWidget {
+    text-align: center;
+}
+.new_widget:nth-child(1):hover .navigationWidget a:link, .new_widget:nth-child(1):hover .navigationWidget a:visited, .new_widget:nth-child(2):hover .navigationWidget a:link, .new_widget:nth-child(2):hover .navigationWidget a:visited, .new_widget:nth-child(3):hover .navigationWidget a:link, .new_widget:nth-child(3):hover .navigationWidget a:visited, .new_widget:nth-child(4):hover .navigationWidget a:link, .new_widget:nth-child(4):hover .navigationWidget a:visited {
+    background: url("/images/_button_arrow_rollover.png") no-repeat scroll right bottom rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+}
+.middleAdvertCarousel2Widget {
+    margin-top: 2em;
+    overflow: visible;
+}
+#educationTop {
+    background: url("/images/button_education.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 2em;
+    padding-top: 0.3em;
+    text-align: center;
+}
+#educationTop a:link, #educationTop a:visited {
+    background: url("/images/_button_arrow_normal.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+    color: #656565;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 5em;
+    text-decoration: none;
+}
+#educationTop:hover, #educationMenu:hover #educationTop {
+    background-position: 0 -2.2em;
+}
+#educationTop a:hover, #educationMenu:hover #educationTop a:link, #educationMenu:hover #educationTop a:visited {
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+}
+#educationMenu:hover #educationDropDown {
+    display: block;
+}
+#educationDropDown {
+    background: url("/images/dropdown_education_1_.gif") no-repeat scroll center center #008000;
+    display: none;
+    height: 21.5em;
+    width: 400%;
+}
+#educationDropDown ul {
+    border-left: 1px solid #A14A38;
+    color: #FFFFFF;
+    float: left;
+    font-size: 0.8em;
+    height: 78%;
+    list-style: none outside none;
+    margin: 1% 0;
+    padding-left: 1%;
+    width: 18%;
+}
+#educationDropDown ul lh {
+    font-weight: bold;
+}
+#educationDropDown ul li {
+    margin-left: 1em;
+}
+#educationDropDown ul:first-child {
+    border-left: medium none;
+    padding-left: 2%;
+}
+#educationDropDown ul:nth-last-child(1) {
+    border: medium none;
+    bottom: 0;
+    float: left;
+    font-weight: bold;
+    width: 100%;
+}
+#educationDropDown ul:nth-last-child(1) li {
+    border-right: 1px solid #A14A38;
+    display: inline-block;
+    float: left;
+    padding-right: 1em;
+}
+#educationDropDown ul:nth-last-child(1) li:nth-child(5) {
+    border: medium none;
+}
+#educationMenu:hover #educationTop a:link {
+    background: url("/images/_button_arrow_rollover.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+}
+#patientCareTop {
+    background: url("/images/button_patientCare.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 2em;
+    padding-top: 0.3em;
+    text-align: center;
+}
+#patientCareTop a:link, #patientCareTop a:visited {
+    background: url("/images/_button_arrow_normal.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+    color: #656565;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 0;
+    padding: 0 4.7em;
+    text-decoration: none;
+}
+#patientCareTop:hover, #patientCareMenu:hover #patientCareTop {
+    background-position: 0 -2.2em;
+}
+#patientCareTop a:hover, #patientCareMenu:hover #patientCareTop a:link, #patientCareMenu:hover #patientCareTop a:visited {
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+}
+#patientCareMenu:hover #patientCareDropDown {
+    display: block;
+}
+#patientCareDropDown {
+    background: url("/images/dropdown_patientCare_1_.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: none;
+    height: 18em;
+    margin-left: -100%;
+    width: 400%;
+}
+#patientCareDropDown ul {
+    color: #FFFFFF;
+    float: left;
+    font-size: 0.8em;
+    height: 95%;
+    list-style: none outside none;
+    margin: 2em 0;
+    width: 20%;
+}
+#patientCareDropDown ul lh {
+    font-weight: bold;
+}
+#patientCareDropDown ul li {
+    margin-left: 1em;
+}
+#patientCareMenu:hover #patientCareTop a:link {
+    background: url("/images/_button_arrow_rollover.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+}
+#researchTop {
+    background: url("/images/button_research.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 2em;
+    padding-top: 0.3em;
+    text-align: center;
+}
+#researchTop a:link, #researchTop a:visited {
+    background: url("/images/_button_arrow_normal.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+    color: #656565;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 5em;
+    text-decoration: none;
+}
+#researchTop:hover, #researchMenu:hover #researchTop {
+    background-position: 0 -2.2em;
+}
+#researchTop a:hover, #researchMenu:hover #researchTop a:link, #researchMenu:hover #researchTop a:visited {
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+}
+#researchMenu:hover #researchDropDown {
+    display: block;
+}
+#researchDropDown {
+    background: url("/images/dropdown_research_1_.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: none;
+    height: 18em;
+    margin-left: -200%;
+    width: 400%;
+}
+#researchDropDown ul {
+    color: #FFFFFF;
+    float: left;
+    font-size: 0.8em;
+    height: 88%;
+    list-style: none outside none;
+    margin: 2em 0;
+    width: 25%;
+}
+#researchDropDown ul lh {
+    font-weight: bold;
+}
+#researchDropDown ul li {
+    margin-left: 1em;
+}
+#researchMenu:hover #researchTop a:link {
+    background: url("/images/_button_arrow_rollover.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+}
+#aboutUsTop {
+    background: url("/images/button_aboutUs.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 2em;
+    padding-top: 0.3em;
+    text-align: center;
+}
+#aboutUsTop a:link, #aboutUsTop a:visited {
+    background: url("/images/_button_arrow_normal.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+    color: #656565;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 5em;
+    text-decoration: none;
+}
+#aboutUsTop:hover, #aboutUsMenu:hover #aboutUsTop {
+    background-position: 0 -2.2em;
+}
+#aboutUsTop a:hover, #aboutUsMenu:hover #aboutUsTop a:link, #aboutUsMenu:hover #aboutUsTop a:visited {
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+}
+#aboutUsMenu:hover #aboutUsDropDown {
+    display: block;
+}
+#aboutUsDropDown {
+    background: url("/images/dropdown_aboutUs_1_.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: none;
+    height: 18em;
+    margin-left: -300%;
+    width: 400%;
+}
+#aboutUsDropDown ul {
+    color: #FFFFFF;
+    float: left;
+    font-size: 0.8em;
+    height: 88%;
+    list-style: none outside none;
+    margin: 2em 0;
+    width: 25%;
+}
+#aboutUsDropDown ul lh {
+    font-weight: bold;
+}
+#aboutUsDropDown ul li {
+    margin-left: 1em;
+}
+#aboutUsMenu:hover #aboutUsTop a:link {
+    background: url("/images/_button_arrow_rollover.png") no-repeat scroll 73% 99% rgba(0, 0, 0, 0);
+}
+.frontPageNews .newsEditable a:hover {
+    text-decoration: underline;
+}
+#educationDropDown ul:first-child li, #educationDropDown ul:nth-child(2) li, #educationDropDown ul:nth-child(3) li {
+    line-height: 175%;
+}
+.frontPageNews .newsFeedWidget li img {
+    float: left;
+    margin-right: 1%;
+}
