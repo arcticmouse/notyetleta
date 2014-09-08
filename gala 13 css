@@ -1,0 +1,439 @@
+
+body {
+    background: url("/images/main_background.jpg") repeat-x fixed center bottom #0B2E4C;
+    color: #F3F3F3;
+    font-family: helvetica;
+    font-size: 0.8em;
+}
+a:link, a:visited {
+    color: #218BE6;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #F3B256;
+    text-decoration: underline;
+}
+#mast_wrapper, .hidekey, .navheading, #navigation, #extra, #bc, #related, iframe, #thankYou, #footer p {
+    display: none;
+}
+#header {
+    margin: auto;
+    width: 850px;
+}
+#section_navigation {
+    display: inline;
+    float: right;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: -10px;
+    text-transform: uppercase;
+}
+#section_navigation a:link, #section_navigation a:visited {
+    color: #218BE6;
+}
+#section_navigation a:hover {
+    text-decoration: underline;
+}
+#section_navigation li {
+    display: inline;
+    font-size: 0.75em;
+    padding: 0 10px;
+}
+#t1, #t2 {
+    padding-right: 20px;
+}
+#t2, #t3, #t4 {
+    border-left: 1px solid #218BE6;
+}
+#container {
+}
+#wrapper {
+    background: none no-repeat scroll center bottom #000000;
+    border: 2px solid #592307;
+    margin: 1.5em auto;
+    min-height: 700px;
+    width: 850px;
+}
+#content {
+    margin: auto;
+    width: 90%;
+}
+#biggerCont {
+    display: block;
+    float: left;
+    margin-top: -2em;
+    width: 62%;
+}
+#smallerCont {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 35%;
+}
+.leftCont {
+    float: left;
+    width: 20%;
+}
+.rightCont {
+    float: right;
+    margin-top: -0.5em;
+    width: 75%;
+}
+.wrapCont {
+    float: left;
+    margin: 15px 0;
+    width: 95%;
+}
+.yellowText {
+    color: #F3B256;
+    size: 1em;
+}
+.yellowHeader {
+    color: #F3B256;
+    font-weight: bold;
+    size: 0.75em;
+    text-transform: uppercase;
+}
+#sponsor {
+    background: url("/images/button_sponsor_normal.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border: medium none;
+    border-radius: 0 0 0 0 !important;
+    color: rgba(0, 0, 0, 0) !important;
+    height: 63px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 142px;
+}
+#sponsor a:link, #sponsor a:visited, #sponsor a:hover, #ticket a:link, #ticket a:visited, #ticket a:hover {
+    color: rgba(0, 0, 0, 0);
+    padding: 100px;
+}
+#sponsor:hover {
+    background: url("/images/button_sponsor_rollover.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: pointer;
+}
+#ticket {
+    background: url("/images/button_ticket_normal.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border: medium none;
+    border-radius: 0 0 0 0 !important;
+    color: rgba(0, 0, 0, 0) !important;
+    height: 63px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 142px;
+}
+#ticket:hover {
+    background: url("/images/button_ticket_rollover.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: pointer;
+}
+h2 {
+    visibility: hidden;
+}
+.set {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    width: 80%;
+}
+.ss-q-short {
+    width: 80%;
+}
+.address {
+    font-size: 0.75em;
+    margin: 2em auto 5em 15%;
+}
+#ss-submit {
+    color: rgba(0, 0, 0, 0);
+    height: 53px;
+    margin-top: 1em;
+    width: 130px;
+}
+.ui-dialog-content {
+    background: none repeat scroll 0 0 #800080 !important;
+    color: #F3F3F3 !important;
+    font-family: helvetica;
+    padding-top: 3em !important;
+}
+.ui-corner-all {
+    display: none;
+}
+.ui-widget-overlay {
+    background: none repeat scroll 0 0 #000000 !important;
+    opacity: 0.5 !important;
+}
+#closureTicket, #closureSponsor, #closureThankYou {
+    float: right;
+    font-weight: bold;
+    margin-top: -2.7em;
+}
+#closureTicket:hover, #closureSponsor:hover {
+    cursor: pointer;
+}
+#dialog-form-sponsor, .sponsorThankYou {
+    background: url("/images/sponsorship_window.jpg") no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0) !important;
+    display: none;
+    height: auto !important;
+}
+#dialog-form-ticket, .ticketThankYou {
+    background: url("/images/ticket_info_window.jpg") no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0) !important;
+    display: none;
+    height: auto !important;
+}
+.sponsorSubmit {
+    background: url("/images/button_sponsor_submit_normal.png") no-repeat scroll center center / 100% 100% rgba(0, 0, 0, 0);
+    border: medium none;
+}
+.sponsorSubmit:hover {
+    background: url("/images/button_sponsor_submit_rollover.png") no-repeat scroll center center / 100% 100% rgba(0, 0, 0, 0);
+}
+.ticketSubmit {
+    background: url("/images/button_ticket_submit_normal.png") no-repeat scroll center center / 100% 100% rgba(0, 0, 0, 0);
+    border: medium none;
+}
+.ticketSubmit:hover {
+    background: url("/images/button_ticket_submit_rollover.png") no-repeat scroll center center / 100% 100% rgba(0, 0, 0, 0);
+}
+.supplement {
+    background: url("/images/UNTHSC_logo_1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: 0;
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 1.5em;
+    height: 43px;
+    margin-bottom: -5em;
+    margin-left: 15%;
+    position: absolute;
+    text-align: center;
+    width: 240px;
+}
+.supplement p {
+    margin: 0;
+}
+.supplement a:link {
+    color: rgba(0, 0, 0, 0);
+}
+#bottomHome {
+    background: url("/images/UNTHSC_logo_1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 2em;
+    height: 43px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    text-align: center;
+    width: 240px;
+}
+.by_editor h2 {
+    visibility: visible;
+}
+.by_editor {
+    margin-top: -3em;
+}
+.sixty {
+    background: url("/images/Btn_Sponsor_Title60k_Sold_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.sixty:hover {
+    background: url("/images/Btn_Sponsor_Title60k_Sold_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sixty a:link, .sixty a:visited, .sixty a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.twenty {
+    background: url("/images/Btn_Sponsor_Presenting25k_Sold_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.twenty:hover {
+    background: url("/images/Btn_Sponsor_Presenting25k_Sold_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.twenty a:link, .twenty a:visited, .twenty a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.fifteen {
+    background: url("/images/Btn_Sponsor_Reception15k_Sold_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.fifteen:hover {
+    background: url("/images/Btn_Sponsor_Reception15k_Sold_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.fifteen a:link, .fifteen a:visited, .fifteen a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.ten {
+    background: url("/eveningwithalegend/images/Btn_Sponsor_Tech10k_Sold_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.ten:hover {
+    background: url("/eveningwithalegend/images/Btn_Sponsor_Tech10k_sold_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.ten a:link, .ten a:visited, .ten a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.five {
+    background: url("/images/Btn_Sponsor_Valet5k_Sold_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.five:hover {
+    background: url("/images/Btn_Sponsor_Valet5k_Sold_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.five a:link, .five a:visited, .five a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.platinum {
+    background: url("/images/Btn_Sponsor_Platinum10k_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.platinum:hover {
+    background: url("/images/Btn_Sponsor_Platinum10k_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.platinum a:link, .platinum a:visited, .platinum a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.gold {
+    background: url("/images/Btn_Sponsor_Gold7k_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.gold:hover {
+    background: url("/images/Btn_Sponsor_Gold7k_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.gold a:link, .gold a:visited, .gold a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.silver {
+    background: url("/images/Btn_Sponsor_Silver3k_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.silver:hover {
+    background: url("/images/Btn_Sponsor_Silver3k_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.silver a:link, .silver a:visited, .silver a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.indiv {
+    background: url("/images/Btn_Sponsor_Individual_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 44px;
+    overflow: hidden;
+    width: 276px;
+}
+.indiv:hover {
+    background: url("/images/Btn_Sponsor_Individual_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.indiv a:link, .indiv a:visited, .indiv a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.purchaseOnline {
+    background: url("/images/Btn_Sponsor_Purchase_Online_Normal.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    height: 43px;
+    overflow: hidden;
+    width: 152px;
+}
+.purchaseOnline:hover {
+    background: url("/images/Btn_Sponsor_Purchase_Online_Rollover.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.purchaseOnline a:link, .purchaseOnline a:visited, .purchaseOnline a:hover {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 3em;
+    height: 44px;
+    width: 276px;
+}
+.blueText {
+    color: #218BE6;
+}
+.topTable {
+    padding-top: 1em;
+    vertical-align: top;
+}
+.red {
+    font-style: italic;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.red li {
+    background: url("/EveningWithALegend/images/galaListdDot.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 0 0 15px 15px;
+}
+#footer {
+    background: url("/images/UNTHSC_logo_1.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 43px;
+    width: 100%;
+}
+h3 {
+    font-size: 2em;
+    font-weight: normal;
+}
