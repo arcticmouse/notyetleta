@@ -1,0 +1,121 @@
+
+@import "http://web.unthsc.edu/site/styles/standard.css";
+#mast, .top-level, .nav-supp h2, h1, #page-links, .contact-supp h2 {
+    display: none;
+}
+body {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+a:link, a:visited, #footer a:link, #footer a:visited {
+    color: #2A6597;
+}
+#wrapper {
+    box-shadow: 1px 0 2px #999999, -1px 0 2px #999999;
+}
+#page_wrap {
+    background: none repeat scroll 0 0 #0B354B;
+}
+#page {
+    background: url("http://web.unthsc.edu/images/2014_Golf_Header.jpg") no-repeat scroll right top / 100% auto #FFFFFF;
+    overflow: visible;
+    padding-top: 18em;
+    width: 77.5%;
+}
+#content {
+    margin-left: 1em;
+}
+#column_nav a:link, #column_nav a:visited {
+    font-weight: bold;
+    text-shadow: 1px 1px #B7B7B7;
+}
+#column_nav a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#column_nav .supp li {
+    float: left;
+    padding: 1em 2em;
+}
+#column_nav .supp ul {
+    float: right;
+}
+.image-supp {
+    margin-left: -1em;
+    width: 20em;
+}
+.nav-supp {
+    background-color: #B7B7B7;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999999), to(#B7B7B7));
+    background: -webkit-linear-gradient(top, #999999, #b7b7b7);
+    background: -moz-linear-gradient(top, #999999, #b7b7b7);
+    background: -ms-linear-gradient(top, #999999, #b7b7b7);
+    background: -o-linear-graident(top, #999999, #b7b7b7);
+    float: left;
+    margin-left: 12.2em;
+    margin-top: -13em;
+    overflow: visible;
+    position: absolute;
+    text-transform: uppercase;
+    width: 83%;
+}
+.contact-supp {
+    margin-left: 0.5em;
+    overflow: visible;
+}
+.dayTime {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0.5px solid #FF9900;
+    border-radius: 0.4em;
+    box-shadow: 0 0.1em 0.1em #663D00;
+    height: 11em;
+    text-align: center;
+    width: 11em;
+}
+.month {
+    background: none repeat scroll 0 0 #FF9900;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+    box-shadow: 0 0 0.1em #663D00;
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.5em 0;
+    text-shadow: 0 0 0.01em;
+}
+.day {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em 0 0.25em;
+}
+.time {
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+.weekday {
+    color: #FF9900;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 0.01em #663D00;
+}
+#footer {
+    background: none repeat scroll 0 0 #191919;
+}
+a:hover, #footer a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+#column_nav {
+    overflow: visible;
+    padding-top: 0;
+}
+h2 {
+    color: #0B354B;
+    font-family: tahoma,geneva,sans-serif;
+}
+.contact-supp p {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-left: -0.5em !important;
+    overflow: visible;
+    width: 125%;
+}
