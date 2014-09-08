@@ -1,0 +1,76 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="public.ascx.cs" Inherits="RSSFeedWidget" %><asp:PlaceHolder ID="phWidgetContent" runat="server">
+        <div class="newsFeedWidget">
+        	<h2><%= FeedName %></h2>
+            <div>
+               	<ul>
+                <asp:PlaceHolder ID="phSingleColumnFeed" Visible="false" runat="server">
+                        <asp:Repeater ID="repSingleColumn" runat="server">
+                                <ItemTemplate>
+	                                <li><a href="<%# ((Jadu.Web.API.RSSItem)Container.DataItem).Link %>" title="<%# ((Jadu.Web.API.RSSItem)Container.DataItem).Title %>"><%# ((Jadu.Web.API.RSSItem)Container.DataItem).Title%></a>
+	                                </li>
+                                </ItemTemplate>
+                        </asp:Repeater>
+                </asp:PlaceHolder>
+                
+                </ul>
+                
+                <p class="more"><a href="/latestnews">More news</a> | <a href="/publications">Publications</a></p>
+				<ul class="social">
+					<li><a href="http://www.facebook.com/UNTHSC"><img src="site/images/icon_FB.png" alt="Facebook" /></a></li>
+					<li><a href="http://twitter.com/unthsc"><img src="site/images/icon_twitter.png" alt="Twitter" /></a></li>
+					<li><a href="http://www.flickr.com/photos/unthsc/"><img src="site/images/icon_flikr.png" alt="Flickr" /></a></li>
+					<li><a href="rss"><img src="site/images/icon_rss.png" alt="RSS" /></a></li>
+					<li><a href="http://www.youtube.com/user/UNTHSCNews"><img src="site/images/icon_YouTube.png" alt="YouTube" /></a></li>
+					<li><a href="iTunesU"><img src="site/images/icon_iTunes.png" alt="iTunes" /></a></li>
+				</ul>
+                </div>
+        </div>
+</asp:PlaceHolder>
+
+
+
+
+
+using System;
+using System.Linq;
+using Jadu.Web;
+using Jadu.Web.API;
+using Jadu.Web.Utils;
+
+public partial class RSSFeedWidget : Jadu.Web.FrontEnd.HomepageWidget
+{
+        protected string FeedName;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+                string feedId = Convert.ToString(getSetting("rssFeed"));
+                if ((feedId == "") || (feedId == null) || !Library.IsNumeric(feedId)) {
+                        phWidgetContent.Visible = false;
+                        return;
+                }
+
+                int noOfItemsToShow = 0;
+                if (Library.IsNumeric(getSetting("numItems"))) {
+                        noOfItemsToShow = Convert.ToInt32(getSetting("numItems"));
+                }
+
+                try {
+                        ExternalFeed rssFeed = Factory.Get<JaduFeedManagerGlobals>().GetExternalFeed(System.Convert.ToInt32(feedId), null);
+                        FeedName = this.encodeHtml(rssFeed.Name);
+                        if (rssFeed == null || rssFeed.Id == -1 || noOfItemsToShow <= 0) {
+                                phWidgetContent.Visible = false;
+                                return;
+                        }
+
+                        var feed = Factory.Get<JaduFeedManagerGlobals>().ParseExternalFeedItems(rssFeed.Url).Take(noOfItemsToShow).ToList();
+
+                                phSingleColumnFeed.Visible = true;
+                                repSingleColumn.DataSource = feed;
+                                repSingleColumn.DataBind();
+                }
+                catch (Exception) {
+                        phWidgetContent.Visible = false;
+                }
+        }
+}
+ 
