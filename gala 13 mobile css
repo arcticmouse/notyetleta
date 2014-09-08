@@ -1,0 +1,119 @@
+
+#site_search, #section_navigation, .logo, #randomimage, #header ul, .footer_print, #dropdownbox, .dropbox_h, .margin, #calendarcontainer, #calendarcontainerinfo, #navbox, .print_hide, .not_visited, #related {
+    display: none;
+}
+#mast p {
+    display: none;
+}
+body {
+    background: url("/images/main_background.jpg") repeat-x scroll center bottom #0B2E4C;
+    color: #F3F3F3;
+    font-family: helvetica;
+    font-size: 0.9em;
+}
+a:link, a:visited {
+    color: #218BE6;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #F3B256;
+    text-decoration: underline;
+}
+#mast_wrapper, .hidekey, .navheading, #navigation, #extra, #footer {
+    display: none;
+}
+#section_navigation {
+    float: right;
+    margin: auto;
+    text-transform: uppercase;
+    width: 45%;
+}
+#section_navigation a:link, #section_navigation a:visited {
+    color: #218BE6;
+}
+#section_navigation a:hover {
+    text-decoration: underline;
+}
+#section_navigation li {
+    display: inline;
+    font-size: 0.75em;
+    padding: 0 20px;
+}
+#t2, #t3 {
+    border-left: 1px solid #218BE6;
+}
+#container {
+    background: url("/images/UNTHSC_logo_1.png") no-repeat scroll center bottom transparent;
+    padding-bottom: 50px;
+}
+#wrapper {
+    background: url("/images/full_window.jpg") no-repeat scroll center center transparent;
+    margin: auto;
+    min-height: 700px;
+    width: 90%;
+}
+#content {
+    margin: auto;
+    width: 60%;
+}
+#biggerCont {
+    float: left;
+    margin-top: -2em;
+    width: 70%;
+}
+#smallerCont {
+    float: left;
+    text-align: center;
+    width: 30%;
+}
+.leftCont {
+    float: left;
+    width: 20%;
+}
+.rightCont {
+    float: right;
+    margin-top: -0.5em;
+    width: 75%;
+}
+.wrapCont {
+    float: left;
+    margin: 15px 0;
+    width: 95%;
+}
+.yellowText {
+    color: #F3B256;
+    size: 1em;
+}
+.yellowHeader {
+    color: #F3B256;
+    font-weight: bold;
+    size: 0.75em;
+    text-transform: uppercase;
+}
+#sponsor {
+    width: 142px;
+    height: 63px;
+    background: url('/images/button_sponsor_normal.jpg') no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+#sponsor a:link, #sponsor a:visited, #sponsor a:hover, #ticket a:link, #ticket a:visited, #ticket a:hover {
+    color: transparent;
+    padding: 100px;
+}
+#sponsor:hover {
+    background: url('/images/button_sponsor_rollover.jpg') no-repeat;
+}
+#ticket {
+    width: 142px;
+    height: 63px;
+    background: url('/images/button_ticket_normal.jpg') no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+#ticket:hover {
+    background: url('/images/button_ticket_rollover.jpg') no-repeat;
+}
