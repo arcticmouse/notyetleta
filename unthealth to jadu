@@ -1,0 +1,362 @@
+
+@import "seasons/cms.css";
+@import "seasons/forms.css";
+@import "seasons/structure/structure3.css";
+body {
+    background-color: #FFFFFF;
+    font-family: tahoma;
+    font-size: 11px;
+    font-weight: normal;
+}
+a:link, a:visited, a:active {
+    color: #00843E;
+    text-decoration: underline;
+}
+a:hover {
+    cursor: pointer;
+}
+.navheading a:link, .navheading a:visited, .navheading a:hover, .navheading a:active {
+    color: #FFFFFF;
+}
+.widget_link a:link, .widget_link a:visited, .widget_link a:hover, .widget_link a:active {
+    background-position: left center;
+    color: #666655;
+    display: block;
+    font-size: 1em;
+    margin: 2px 0 0 2px;
+    padding: 0;
+    text-decoration: none;
+}
+p.widget_p a:link, p.widget_p a:visited, p.widget_p a:hover, p.widget_p a:active {
+    color: #222222;
+}
+#header h1 a:link, #header h1 a:visited, #header h1 a:hover, #header h1 a:active {
+    color: #222222;
+    display: none;
+}
+#section_navigation {
+    float: right;
+    line-height: normal;
+}
+#section_navigation ul {
+    float: right;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#section_navigation li {
+    background: url("http://www.unthealth.org/App_Themes/UNTPG/images/newLeft.gif") no-repeat scroll left top transparent;
+    display: inline;
+    float: left;
+    padding: 0 5px;
+}
+#section_navigation a {
+    background: url("http://www.unthealth.org/App_Themes/UNTPG/images/newRight.gif") no-repeat scroll right top transparent;
+    float: left;
+    text-decoration: none;
+}
+#section_navigation a span.slink {
+    background-color: rgba(0, 0, 0, 0);
+    background-position: right top;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    padding: 15px 11px 12px 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#section_navigation a:hover {
+    background: url("http://www.unthealth.org/App_Themes/UNTPG/images/hoverNewRight.gif") no-repeat scroll right top transparent;
+}
+#section_navigation li:hover {
+    background: url("http://www.unthealth.org/App_Themes/UNTPG/images/hoverNewLeft.gif") no-repeat scroll left top transparent;
+}
+#section_navigation a:hover span.slink {
+    color: #000000;
+}
+.logo {
+    float: left;
+}
+#linksearch {
+    float: right;
+    margin-top: 30px;
+    text-align: right;
+}
+#site_search {
+    clear: right;
+    text-align: right;
+}
+#container {
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    width: 800px;
+}
+#content h2 {
+    color: #222222;
+    font-size: 1.9em;
+}
+#content h3 {
+    color: #222222;
+    font-size: 1.5em;
+}
+#content {
+    border-bottom: 1px solid #CCCCCC;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    margin-left: 205px;
+    padding: 15px 30px;
+    width: 531px;
+}
+.navheading {
+    background: url("/unthealth/images/headerBack.png") no-repeat scroll center center / 100% 30px transparent;
+    color: #000000;
+    font-weight: bold;
+    height: 25px;
+    letter-spacing: 1px;
+    padding: 12px 0 0 30px;
+    text-transform: uppercase;
+}
+p.widget_p {
+    background-position: left center;
+    color: #222222;
+    font-size: 1em;
+    margin: 2px 0 0 2px;
+    padding: 0;
+}
+#header h1 {
+    color: #222222;
+    display: block;
+    font-size: 1.9em;
+}
+#header h1 a:visited #header h1 a:hover {
+    color: #222222;
+}
+#footer {
+    border-top: 10px solid #A5A5A5;
+    color: #222222;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+#linksearch a {
+    color: #222222;
+    font-size: 0.9em;
+}
+.widget {
+    border: 1px solid #CCCCCC;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    margin: 5px 1em;
+    padding: 0.25em;
+}
+.widget li {
+    border-top: 1px dotted;
+    list-style: none outside none;
+    margin: 0;
+}
+#leftcolumn {
+    margin-top: 5px;
+}
+#extra {
+    margin-top: 5px;
+}
+#site_logo {
+    display: none;
+    margin: 5px;
+}
+#mast_wrapper {
+    height: 85px;
+}
+#identityWrapper {
+    clear: left;
+    padding: 5px;
+}
+#related {
+    border: 2px solid #CCCCCC;
+    display: none;
+}
+.infobox {
+    border: 2px solid #CCCCCC;
+}
+.newsimage {
+    border: 2px solid #CCCCCC;
+}
+.cat_news img {
+    border: 2px solid #CCCCCC;
+}
+.newsbox img {
+    border: 2px solid #CCCCCC;
+}
+.rightcolumn img {
+    border: 2px solid #CCCCCC;
+}
+.leftcolumn img {
+    border: 2px solid #CCCCCC;
+}
+.contentimage {
+    border: 2px solid #CCCCCC;
+}
+.documentimage {
+    border: 2px solid #CCCCCC;
+}
+.locationmap {
+    border: 2px solid #CCCCCC;
+}
+.linkbox {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.download_wrap {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.infobox_h {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+#categories_in {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.cate_wrap {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.cat_news {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.newsbox {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.news_wrap {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.col_wrap {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+.contact_h {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+address {
+    background-image: url("../images/rule.gif");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+#bc {
+    border-bottom: 1px solid #5B5B5B;
+    font: inherit;
+    width: 450px;
+}
+.cate_wrap li {
+    list-style: disc outside url("../images/disc.gif");
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+#categories_in li {
+    list-style: disc outside url("../images/disc.gif");
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+.info_on li {
+    list-style: disc outside url("../images/disc.gif");
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+.by_editor ul li {
+    list-style: disc outside none;
+}
+.answer ul li {
+    list-style: disc outside none;
+}
+.newsbox ul li {
+    list-style: disc outside none;
+}
+#contentlist li {
+    list-style: disc outside url("../images/disc.gif");
+}
+#sitemap ul {
+    background-image: url("../images/bullet.gif");
+    background-position: 0 9px;
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+.download_indent p {
+    background-image: url("../images/bullet.gif");
+    background-position: 0 9px;
+    background-repeat: no-repeat;
+}
+.infobox p {
+    background-image: url("../images/bullet.gif");
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+    padding-top: 0;
+}
+.cate_wrap p {
+    background-image: url("../images/bullet.gif");
+    background-position: 0 8px;
+    background-repeat: no-repeat;
+}
+#header {
+    background-image: url("../images/UNT_Health_logo.JPG");
+    background-repeat: no-repeat;
+    background-size: 340px 51px;
+    margin-top: 25px;
+}
+#navigation {
+    margin-right: 1em;
+    margin-top: -55px;
+    width: 200px !important;
+}
+.widget ul {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 85%;
+}
+.by_editor {
+    width: 480px;
+}
+#wrapper {
+    margin-top: -5px;
+}
+#navigation_widgets {
+    display: none;
+}
+.widget_wrap {
+    width: 200px;
+}
+#access_links {
+    display: none;
+}
+.yourHealth {
+    background: url("/unthealth/images/headerBack.png") no-repeat scroll center center / 100% 30px transparent;
+    color: #000000;
+    font-weight: bold;
+    height: 25px;
+    letter-spacing: 1px;
+    padding: 10px 0 0 50px;
+    text-transform: uppercase;
+}
+.halfHome {
+    border: 1px solid #CCCCCC;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    min-height: 350px;
+    overflow: hidden;
+    padding: 3px;
+    width: 250px;
+}
