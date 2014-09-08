@@ -1,0 +1,64 @@
+
+@import "https://web.unthsc.edu/site/styles/standard.css";
+#contact {
+    border-left: 2px solid #CCCCCC;
+    margin-left: 2em;
+    padding-left: 3em;
+}
+#contact h3 {
+    color: #02943F;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+#contact a:link, #contact a:visited, #secondary a:link, #secondary a:visited, #column_nav a:hover {
+    text-decoration: none;
+}
+.contactInfo {
+    background: none repeat scroll 0 0 #02943F;
+    display: none;
+    width: 97.1%;
+}
+.contactInfo td {
+    border: 0 none;
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    text-align: center;
+    vertical-align: middle;
+    width: 33%;
+}
+#secondary img {
+    float: left;
+    margin: 0;
+}
+#secondary ul {
+    float: left;
+    list-style: none outside none;
+    margin-left: 1em;
+    width: 30%;
+}
+#secondary {
+    color: #02943F;
+    height: 25em;
+    margin: 0 0 7em;
+    vertical-align: middle;
+}
+.top-level, .nav-supp h2 {
+    display: none;
+}
+#secondary li {
+    margin-bottom: 0.35em;
+}
+.nav-supp a:link, .nav-supp a:visited {
+    font-weight: bold;
+}
+.nav-supp li:last-of-type {
+    background: url("http://web.unthsc.edu/images/icon_FB.png") no-repeat scroll left center transparent;
+    text-indent: 3em;
+    margin-top: 3em;
+}
+.nav-supp li:last-of-type a:link, .nav-supp li:last-of-type a:visited {
+    font-weight: normal;
+}
