@@ -1,0 +1,129 @@
+<?php
+	include_once('JaduCategories.php');
+	include_once('egov/JaduCL.php');
+
+	if ('%CATEGORIES%' != '' && '%CATEGORIES%' != '%CATEGORIES'.'%') {
+	
+		$widgetCategoryID = '%CATEGORIES%';
+		
+		$widgetLeftCats = array();
+		$widgetRightCats = array();
+	
+		// Category Links
+		$widgetCategoryList = new CategoryList(BESPOKE_CATEGORY_LIST_NAME, BESPOKE_CATEGORY_LIST_FILE);
+		$widgetAllCategories = $widgetCategoryList->getChildCategories($widgetCategoryID);
+		$widgetParent = $widgetCategoryList->getCategory($widgetCategoryID);
+	
+		$widgetCategories = filterCategoriesInUse($widgetAllCategories, DOCUMENTS_APPLIED_CATEGORIES_TABLE, true);	
+?>
+		<div class="cateInfoWidget">
+			<h3>Categories in <?php print encodeHtml($widgetParent->name); ?></h3>
+<?php
+		if (count($widgetCategories) > 0) {
+?>
+			<ul class="list">
+<?php
+			foreach ($widgetCategories as $widgetSubCat) {
+?>
+				<li><a title="<?php print encodeHtml($widgetSubCat->name); ?>" href="http://<?php print DOMAIN . buildDocumentsCategoryURL($widgetSubCat->id); ?>"><?php print encodeHtml($widgetSubCat->name); ?></a></li>
+<?php
+			}
+?>
+			</ul>
+<?php
+		}
+?>		
+		</div>
+<?php
+	}
+?>
+
+
+
+
+
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="public.ascx.cs" Inherits="SubCategoryLinksWidget" %>
+
+<asp:PlaceHolder ID="phSubCategoryLinksWidget" runat="server" Visible="false">
+	<div class="cateInfoWidget">
+		<h3><% Response.Write(this.encodeHtml(this.parentCategory.Name)); %></h3>
+		<asp:Repeater ID="repSubCategories" runat="server" Visible="false">
+			<HeaderTemplate>   
+		<ul class="list">
+			</HeaderTemplate>
+			<ItemTemplate> 
+			<li><a href="<%# DataBinder.Eval(Container.DataItem,"categoryURL") %>"><%# DataBinder.Eval(Container.DataItem,"categoryName") %></a></li>
+			</ItemTemplate>
+			<FooterTemplate>
+		</ul>
+			</FooterTemplate>
+		</asp:Repeater>
+		<asp:PlaceHolder ID="phNoSubCategories" runat="server" Visible="false">
+			<p>There are no categories in this section.</p>
+		</asp:PlaceHolder>
+		<p><h3>. . .</h3></p>
+	</div>
+</asp:PlaceHolder>
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using Jadu.Web;
+using Jadu.Web.API;
+
+// Sub Category Links Widget
+
+public partial class SubCategoryLinksWidget : Jadu.Web.FrontEnd.HomepageWidget
+{
+    public int categoryID = -1;
+
+	protected CategoryItem parentCategory;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //Get the categories for this widget from database or url
+		string tempCategory = this.getSetting("categories");
+		if (tempCategory != null && tempCategory != "") {
+			this.categoryID = System.Convert.ToInt32(tempCategory);
+		}
+		else if (Request["categoryID"] != null) {
+			this.categoryID = System.Convert.ToInt32(Request["categoryID"]);
+		}
+        
+		if (this.categoryID > 0) {
+			this.phSubCategoryLinksWidget.Visible = true;
+
+			List<CategoryItem> childCategories = new List<CategoryItem>(this.Factory.JaduAppliedCategoriesGlobals.FilterCategoriesInUse(this.CategoryList.GetChildCategories(this.categoryID), this.Constants.get("DOCUMENTS_APPLIED_CATEGORIES_TABLE"), true, this.Constants.get("BESPOKE_CATEGORY_LIST_NAME")));
+
+			//Get parent category name
+			this.parentCategory = this.CategoryList.GetCategory(this.categoryID);
+
+			DataSet dsSubCategories = new DataSet();
+			DataTable dtSubCategories = dsSubCategories.Tables.Add("cats");
+			dtSubCategories.Columns.Add("categoryURL", Type.GetType("System.String"));
+			dtSubCategories.Columns.Add("categoryName", Type.GetType("System.String"));
+
+			foreach(CategoryItem subCategory in childCategories) {
+				DataRow drSubCategory = dtSubCategories.NewRow();
+				drSubCategory["categoryURL"] = this.getSiteRootURL() + this.Factory.JaduReadableURLsGlobals.BuildDocumentsCategoryURL(subCategory.Id, subCategory.Name);
+				drSubCategory["categoryName"] = this.encodeHtml(subCategory.Name);
+				dtSubCategories.Rows.Add(drSubCategory);
+			}
+
+
+			if (dtSubCategories.Rows.Count > 0) {
+				this.repSubCategories.Visible = true;
+				this.repSubCategories.DataSource = dsSubCategories;
+				this.repSubCategories.DataMember = "cats";
+				this.repSubCategories.DataBind();
+			}
+			else {
+				this.phNoSubCategories.Visible = true;
+			}
+		}
+    }
+}
