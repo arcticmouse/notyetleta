@@ -1,0 +1,106 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Leta extends CI_Controller {
+
+   public $data;
+
+
+
+
+   public function __construct(){
+      	parent :: __construct();
+		$this->load->helper("html"); 
+   }
+
+
+
+
+   public function findFriendly() {
+		$str_data = file_get_contents("./application/controllers/content_audit/friendly.json");
+		$data = json_decode($str_data, true);
+		return $data;
+		} //end function
+	
+	
+	
+			
+	public function friendlyAndUrl($dat) {
+		$count = 0;
+		
+		foreach($dat["RECORDS"] as $friendly) {
+			//check for hsc.unt.edu, dont do anything if its the url
+			if (strpos($friendly['url'], "hsc.unt.edu/") === FALSE) {	
+				//get the friendly		
+				$thisfriend = $friendly['friend'];
+				////echo "friendly: " . $thisfriend . "<br/>";
+			
+				//get the url and add web.unthsc to it if it doesnt have
+				if (!strstr($friendly['url'], "http://web.unthsc.edu")) {
+					$thisurl = "http://web.unthsc.edu" . $friendly['url'];
+					////echo "added <br />";
+					} else {
+						$thisurl = $friendly['url'];
+						////echo "not added <br />";
+						}
+				////echo "url: " . $thisurl . "<br />";
+				
+				//document or homepage
+				$pattern = '#\bhttp://web.unthsc.edu/info\b\/[0-9]{5,6}/[^/]*#';
+				$test = preg_split($pattern, $thisurl);
+				$checkDoc = (isset($test[1]) && (strlen($test[1]) > 1)) ? $test[1] : NULL;
+				////echo "check doc is " . $checkDoc;
+				
+				//if checkDoc is a document, otherwise is a homepage
+				if ($checkDoc) {
+					$docPattern = '#/#';
+					$docString = preg_split($docPattern, $checkDoc);
+					$docID = $docString[1];
+
+					//query database					
+					$sql = "SELECT * FROM master WHERE (url=? OR documentid=?) AND pagenumber=?";
+					$query = $this->db->query($sql, array($thisurl, $docID, '1'));
+					$d = $query->result_array();
+					} else if (preg_match_all($pattern, $thisurl, $matches)) {
+						$match = $matches[0][0];
+						$matchDash = $match . '/';
+						$pattern = '#[^/]+$#';
+						$replacement = 'homepage';
+						$matchHomeReplace = preg_replace($pattern, $replacement, $match);
+						////echo "match: " . $match .  " match2: " . $matchHomeReplace . " matchDash: " . $matchDash . "<br />";
+					
+						//query the database for matching urls, restrict to first page number OR no pagenumber
+				    	$sql = "SELECT * FROM master WHERE url=? OR url=? OR url=?";
+						$query = $this->db->query($sql, array($match, $matchHomeReplace, $matchDash));
+						$d = $query->result_array();
+						} //end ifelse
+				
+				if (isset($d)) {
+				/*
+						foreach($d as $row) {
+							new dBug($row);
+							$count++;
+							} //end foreach
+				*/
+				if (count($d) == 0) {
+					echo $thisurl . "<br />";
+					$count++;
+						}
+						}
+					
+				////echo "---------------------<br />";
+				////echo "---------------------<br />";
+				$d = NULL;
+				} //end if
+			} //end foreach
+		echo $count . " out of " . count($dat["RECORDS"]);
+		}//end function		
+
+
+
+
+	public function index()	{
+			$aString = $this->findFriendly();	
+			$this->friendlyAndUrl($aString);
+	} //end function			
+
+}
